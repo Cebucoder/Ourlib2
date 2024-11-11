@@ -1,0 +1,169 @@
+================ HTML ================
+
+    <div class="image_box_con">
+      <figure class="image_boxes"><img src="image1.jpg" alt="Ourlib"/>
+        <figcaption>
+          <h3>Lorem Ipsum</h3>
+          <h5>Consectetur</h5>
+        </figcaption><a href="#"></a>
+      </figure>
+      <figure class="image_boxes hover"><img src="image2.jpg" alt="Ourlib"/>
+        <figcaption>
+          <h3>Lorem Ipsum</h3>
+          <h5>Dolor &amp; Sit</h5>
+        </figcaption><a href="#"></a>
+      </figure>
+      <figure class="image_boxes"><img src="image3.jpg" alt="Ourlib"/>
+        <figcaption>
+          <h3>Lorem Ipsum</h3>
+          <h5>Consectetur</h5>
+        </figcaption><a href="#"></a>
+      </figure>
+    </div>
+
+================ HTML END ================
+
+
+================ CSS ================
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+.image_box_con {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image_boxes {
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: left;
+}
+.image_boxes * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.image_boxes:before {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  top: 100%;
+  content: '';
+  background-color: rgba(51, 51, 51, 0.9);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+.image_boxes img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+.image_boxes figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.image_boxes h3,
+.image_boxes h5 {
+  margin: 0;
+  opacity: 0;
+  letter-spacing: 1px;
+}
+.image_boxes h3 {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  text-transform: uppercase;
+  font-weight: 400;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  margin-bottom: 5px;
+}
+.image_boxes h5 {
+  font-weight: normal;
+  background-color: #ae895d;
+  padding: 3px 10px;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.image_boxes a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.image_boxes:hover:before,
+.image_boxes.hover:before {
+  top: 10px;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.image_boxes:hover h3,
+.image_boxes.hover h3,
+.image_boxes:hover h5,
+.image_boxes.hover h5 {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+.image_boxes:hover h3,
+.image_boxes.hover h3 {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.image_boxes:hover h5,
+.image_boxes.hover h5 {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+
+================ CSS END ================
+
+
+================ JS ================
+
+
+
+================ JS END ================

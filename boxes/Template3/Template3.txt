@@ -1,0 +1,173 @@
+================ HTML ================
+
+<div class="card_con">
+    <div class="wrapper">
+    <div class="card_boxes">
+        <div class="card_box">
+            <a class="card card_anim" href="#">
+            <div class="overlay"></div>
+            <div class="circle"> 
+                <!-- <figure><img src="img1.jpg" alt=""></figure> -->
+            </div>
+            <p>Sample text</p>
+            </a>
+        </div>
+        <div class="card_box">
+            <a class="card card_anim" href="#">
+            <div class="overlay"></div>
+            <div class="circle"> 
+                <!-- <figure><img src="img1.jpg" alt=""></figure> -->
+            </div>
+            <p>Sample text</p>
+            </a>
+        </div>
+        <div class="card_box">
+            <a class="card card_anim" href="#">
+            <div class="overlay"></div>
+            <div class="circle"> 
+                <!-- <figure><img src="img1.jpg" alt=""></figure> -->
+            </div>
+            <p>Sample text</p>
+            </a>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+================ HTML END ================
+
+================ CSS ================
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    height: 100%;
+  }
+  body {
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+  }
+
+.card_con{min-height: 0; position: relative; padding: 100px 0;}
+.wrapper{max-width: 1400px; width: 100%; position: relative; margin: 0 auto;}
+img{display: block;}
+
+.card_boxes{display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;}
+
+.card_anim {
+  --bg-color: #CEB2FC;
+  --bg-color-light: #F0E7FF;
+  --text-color-hover: #fff;
+  --box-shadow-color: rgba(206, 178, 252, 0.48);
+}
+
+.card {
+  width: 220px;
+  height: 321px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+
+
+.card:hover .overlay {
+  transform: scale(4) translateZ(0);
+}
+
+.card:hover .circle {
+  border-color: var(--bg-color-light);
+  background: var(--bg-color);
+  background: rgba(0,0,0,0.04);
+}
+
+.card:hover .circle:after {
+  /* background: var(--bg-color-light); */
+  background: url(img1.jpg);
+    background-size: cover;
+}
+
+.card:hover p {
+  color: var(--text-color-hover);
+}
+
+.card:active {
+  transform: scale(1) translateZ(0);
+  box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card p {
+  font-size: 17px;
+  color: #4C5656;
+  margin-top: 30px;
+  z-index: 1000;
+  transition: color 0.3s ease-out;
+}
+
+.circle {
+  width: 131px;
+  height: 131px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.circle:after {
+  content: "";
+  width: 118px;
+  height: 118px;
+  display: block;
+  position: absolute;
+  /* background: var(--bg-color); */
+  background: url(img1.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  transition: opacity 0.3s ease-out;
+}
+
+.overlay {
+  width: 118px;
+  position: absolute;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  top: 70px;
+  left: 50px;
+  z-index: 0;
+  transition: transform 0.3s ease-out;
+}
+
+================ CSS END ================

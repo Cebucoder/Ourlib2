@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1400px;
+    min-height: 0;
+    padding: 0 15px;
+}
+
+.upld_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #1f1f1f;
+}
+
+
+.front_end_lang {
+    display: flex;
+    align-items: center;
+}
+
+.front_end_lang .upld_btn {
+    background: #222222;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #faf9f6;
+    cursor: pointer;
+}
+
+
+.categ_and_upld_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upld_btn.active {
+    background: #E1306C0F;
+    color: #e1306c;
+    border-left: 2px solid #e1306c;
+}
+
+.upld_category_con select {
+    width: 130px;
+    height: 50px;
+    padding: 0 10px;
+    font-size: inherit;
+    background: transparent;
+    color: #ffff;
+    border: 2px solid #e1306c;
+    border-radius: 5px;
+}
+
+.upld_category_con select option {
+    background: #1f1f1f;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+}
+
+.upld_category_con button {
+    width: 100px;
+}
+
+.upld_category_con button {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.upld_code_area {
+    width: 100%;
+    height: 600px;
+    font-family: monospace;
+}
+
+.upld_code_area textarea {
+    width: 100%;
+    height: 600px;
+    padding: 50px 30px;
+}
+
+.upld_code_area {
+    border-left: 2px solid #faf9f6;
+}
+
+.upld_code_con {
+    padding-top: 20px;
+    background: #1e1e1e;
+}
+
+.view-lines {
+    font-family: monospace !important;
+}
+
+.upload_container button {
+    width: 200px;
+    line-height: 50px;
+    font-size: 18px;
+    background: #e1306c;
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    float: right;
+    cursor: pointer;
+}
+
+.upload_container button:hover {
+    background: #E1306C;
+}
+
+.upld_thumb_con {
+    margin: 10px 0;
+    line-height: 50px;
+    float: left;
+}
+
+.upld_thumb_con label {
+    display: inline-block;
+    background: #E1306C;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 5px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.upld_thumb_con .thumb_note {
+    border-left: 2px solid #E1306C;
+    padding-left: 10px;
+}
+
+.upld_thumb_con input[type="file"] {
+    display: none;
+}
+
+.upload_container {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}

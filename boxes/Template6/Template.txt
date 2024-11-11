@@ -1,0 +1,189 @@
+================ HTML ================
+
+  <!--Bottom 1-->
+  <div id="bottom">
+    <div class="btm_con">
+
+      <div class="btm_boxes">
+        <section class="btm_box">
+          <div class="content">
+            <p class="heading">Card</p>
+            <p class="para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
+              at voluptas minus culpa deserunt delectus sapiente inventore pariatur
+            </p>
+            <a href="javascript:;">Click Here</a>
+          </div>
+        </section>
+        <section class="btm_box">
+          <div class="content">
+            <p class="heading">Card</p>
+            <p class="para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
+              at voluptas minus culpa deserunt delectus sapiente inventore pariatur
+            </p>
+            <a href="javascript:;">Click Here</a>
+          </div>
+        </section>
+        <section class="btm_box">
+          <div class="content">
+            <p class="heading">Card</p>
+            <p class="para">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi laboriosam
+              at voluptas minus culpa deserunt delectus sapiente inventore pariatur
+            </p>
+            <a href="javascript:;">Click Here</a>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </div>
+  <!--End of Bottom 1-->
+
+================ HTML END ================
+
+
+================ CSS ================
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  color: #FAF9F6;
+  background: #0f0f0f;
+}
+
+/*Bottom*/
+#bottom {}
+
+.btm_con {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btm_boxes {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.btm_boxes section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  padding: 2px;
+  border-radius: 24px;
+  overflow: hidden;
+  line-height: 1.6;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 34px;
+  border-radius: 22px;
+  color: #ffffff;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .heading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.3;
+  z-index: 1;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.content .para {
+  z-index: 1;
+  opacity: 0.8;
+  font-size: 18px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btm_boxes section::before {
+  content: "";
+  position: absolute;
+  height: 160%;
+  width: 160%;
+  border-radius: inherit;
+  background: #0a3cff;
+  background: linear-gradient(to right, #0a3cff, #0a3cff);
+  transform-origin: center;
+  animation: moving 4.8s linear infinite paused;
+  transition: all 0.88s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btm_boxes section:hover::before {
+  animation-play-state: running;
+  z-index: -1;
+  width: 20%;
+}
+
+.btm_boxes section:hover .content .heading,
+.btm_box:hover .content .para {
+  color: #000000;
+}
+
+.btm_boxes section:hover {
+  box-shadow: 0rem 6px 13px rgba(10, 60, 255, 0.1), 0rem 24px 24px rgba(10, 60, 255, 0.09), 0rem 55px 33px rgba(10, 60, 255, 0.05), 0rem 97px 39px rgba(10, 60, 255, 0.01), 0rem 152px 43px rgba(10, 60, 255, 0);
+  scale: 1.05;
+  color: #000000;
+}
+
+@keyframes moving {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.btm_boxes section a {
+  display: block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #fff;
+  text-decoration: unset;
+  background: #0062ff;
+  border-radius: 50px;
+  border: 1px solid #0062ff;
+}
+
+.btm_boxes section:hover a:hover {
+  background: #fff;
+  border: 1px solid #0062ff;
+  color: #0062ff;
+}
+
+================ CSS END ================
+
+
+================ JS ================
+
+
+
+================ JS END ================

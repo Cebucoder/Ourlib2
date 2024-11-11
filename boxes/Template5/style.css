@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  color: #FAF9F6;
+  background: #0f0f0f;
+}
+
+
+/*Bottom */
+#bottom {}
+
+.btm_con {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btm_boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  width: fit-content;
+  margin: auto;
+}
+
+.btm_boxes .red {
+  background-color: #007e9e;
+}
+
+.btm_boxes .blue {
+  background-color: #0062ff;
+}
+
+.btm_boxes .green {
+  background-color: #18cd5e;
+}
+
+.btm_boxes section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 350px;
+  width: 300px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.btm_boxes section p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.btm_boxes section p.second-text {
+  font-size: .7em;
+}
+
+.btm_boxes section:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.btm_boxes:hover>section:not(:hover) {
+  filter: blur(10px);
+  transform: scale(0.9, 0.9);
+}
